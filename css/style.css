@@ -23,12 +23,35 @@ img {
 
 .menu {
 	background: #252525;
+	padding: 10px 0;
 }
 
-.menu-nav a {
+.menu-nav ul {
+	float: right;
+	list-style: none;
+}
+
+.menu-nav ul li {
+	display: inline-block;
+}
+
+.menu-nav ul li a {
 	text-decoration: none;
 	color: #fff;
 	font-size: 1.125em;
+	display: inline-block;
+	padding: 10px;
+	margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+	.menu-nav ul {
+		float: none;
+	}
+	.menu-nav ul li a {
+		padding-left: 0px;
+		margin-left: 0px;
+	}
 }
 
 /* Intro */
@@ -37,11 +60,14 @@ img {
 	background: url('../img/bg-intro.jpg') no-repeat center center;
 	background-size: cover;
 	color: #fff;
+	padding: 150px 0;
+	text-align: center;
 }
 
 .intro h1 {
 	text-transform: uppercase;
 	font-size: 3em;
+	font-weight: bold;
 }
 
 .intro h1::after {
@@ -50,6 +76,7 @@ img {
 	width: 20px;
 	height: 4px;
 	background: #fff;
+	margin: 20px auto;
 }
 
 .intro p {
@@ -57,10 +84,23 @@ img {
 	font-size: 1.125em;
 }
 
+@media (max-width: 768px) {
+	.intro {
+		padding: 60px 0;
+	}
+}
+
 /* Sobre */
+
+.sobre {
+	padding: 60px 0;
+}
 
 .sobre h2 {
 	font-size: 2.25em;
+	text-align: center;
+	margin-bottom: 60px;
+	font-weight: bold;
 }
 
 .sobre-item h3 {
@@ -72,12 +112,18 @@ img {
 	font-weight: normal;
 	text-align: center;
 	position: relative;
+	width: 220px;
+	padding: 5px 0 10px 0;
+	top: -25px;
 }
 
 .sobre > p {
 	font-size: 1.125em;
 	line-height: 1.4em;
 	font-style: italic;
+	max-width: 460px;
+	text-align: center;
+	margin: 20px auto;
 }
 
 /* Produtos */
@@ -86,10 +132,13 @@ img {
 	background: #e7e4d8;
 	border-top: 3px solid #d6d3c8;
 	border-bottom: 3px solid #d6d3c8;
+	padding: 60px 0;
 }
 
 .produtos-item h2 {
 	font-size: 2.25em;
+	margin-bottom: 20px;
+	text-align: center;
 }
 
 .produtos-item h2::before {
@@ -101,6 +150,7 @@ img {
 	border-radius: 50%;
 	border: 5px solid #e7e4d8;
 	box-shadow: 0 0 0 5px currentColor;
+	margin: 10px auto;
 }
 
 h2.produtos-paulista::before {
@@ -118,6 +168,8 @@ h2.produtos-mineiro::before {
 .produtos-item p {
 	font-size: 0.875em;
 	line-height: 1.4em;
+	margin-bottom: 40px;
+	text-align: center;
 }
 
 .produtos-btn {
@@ -128,6 +180,10 @@ h2.produtos-mineiro::before {
 	font-size: 1.125em;
 	font-weight: bold;
 	text-transform: uppercase;
+	display: block;
+	width: 180px;
+	margin: 0 auto;
+	padding: 10px 0;
 }
 
 /* Locais */
